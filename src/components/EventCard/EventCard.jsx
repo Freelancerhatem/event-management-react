@@ -4,7 +4,8 @@ const EventCard = ({card}) => {
     const {title,img,details,price,id} = card;
     return (
         
-            <div className=" flex w-96 h-[430px] mb-12  flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+            <div data-aos='fade-up' data-aos-duration="2000" 
+             className=" flex w-96 h-[430px] mb-12  flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                 <div className=" mx-4 mt-4 h-56 overflow-hidden rounded-xl bg-blue-gray-500 bg-clip-border text-white shadow-lg shadow-blue-gray-500/40">
                     <img
                         src={img}

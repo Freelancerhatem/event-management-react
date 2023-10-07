@@ -24,9 +24,8 @@ const SignIn = () => {
         })
         .catch(err=>{
             const error = err.message;
-            const err2 = err.code
-            console.log(err2);
-            swal("Warning!", 'Your Mail/Password Is Incorrect', "error");
+            console(error)
+            swal("Warning!",'Your Mail/Password Is Incorrect',"error");
         }) 
     }
     return (
