@@ -1,7 +1,18 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 
 const Navbar = () => {
+  const {user,signOutUser} = useContext(AuthContext)
+  const handleSignOut =()=>{
+    signOutUser()
+    .then()
+    .catch(err=>{
+      const error = err.message;
+      console.log(error)
+    })
+  }
     return (
         <div>
             <div className="">
@@ -13,9 +24,13 @@ const Navbar = () => {
       <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
   </a>
   <div className="order-2">
-        <Link to='/signin'>
+        {
+          user ? 
+          <button onClick={handleSignOut} className="btn bg-white text-black hover:bg-black hover:text-white">Log Out</button>
+      :<Link to='/signin'>
             <button className="btn bg-white text-black hover:bg-black hover:text-white">Sign in</button>
         </Link>
+        }
   </div>
   <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-cta">
     <ul className="flex flex-col  font-medium p-4 md:p-0 mt-4 border  rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">

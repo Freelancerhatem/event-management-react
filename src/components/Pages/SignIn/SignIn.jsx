@@ -1,24 +1,32 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import Navbar from "../../common/Navbar/Navbar";
+import swal from 'sweetalert';
 
 
 const SignIn = () => {
     const {signInUser} = useContext(AuthContext);
+    const navigate =useNavigate()
+    const location = useLocation();
+
     const handleLogin =(e)=>{
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const email = form.get('email');
         const password = form.get('password');
         signInUser(email,password)
-        .then(res=>{
-            const user = res.user;
-            console.log(user);
+        .then(()=>{
+            swal("Good job!", "Log in Succesfully!", "success");
+            navigate(location?.state? location.state :'/')
+            
+            
         })
         .catch(err=>{
             const error = err.message;
-            console.log(error);
+            const err2 = err.code
+            console.log(err2);
+            swal("Warning!", 'Your Mail/Password Is Incorrect', "error");
         }) 
     }
     return (
