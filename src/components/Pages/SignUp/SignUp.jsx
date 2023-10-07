@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
+import Navbar from "../../common/Navbar/Navbar";
 
 
 const SignUp = () => {
@@ -24,7 +25,9 @@ const SignUp = () => {
     }
     return (
         <div>
-            
+            <div className="bg-gray-300">
+            <Navbar></Navbar>
+            </div>
             <div>                
                 <div className="relative mt-32 mx-auto flex w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                     <div className="relative mx-4 -mt-6 mb-4 grid h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-pink-600 to-pink-400 bg-clip-border text-white shadow-lg shadow-pink-500/40">

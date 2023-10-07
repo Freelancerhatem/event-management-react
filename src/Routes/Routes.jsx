@@ -5,6 +5,8 @@ import Root from "../components/Root/Root";
 import Home from "../components/Home/Home";
 import SignIn from "../components/Pages/SignIn/SignIn";
 import SignUp from "../components/Pages/SignUp/SignUp";
+import Details from "../components/EventCard/Details/Details";
+import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -14,11 +16,17 @@ export const router = createBrowserRouter([
       children:[
         {
             path:'/',
-            element:<Home></Home>
+            element:<Home></Home>,
+            loader:()=>fetch('/public/event.json')
         },
         {
             path:'/signin',
             element:<SignIn></SignIn>
+        },
+        {
+            path:'details/:id',
+            element:<PrivateRoute><Details></Details></PrivateRoute>,
+            loader:()=>fetch('/public/event.json')
         },
         {
             path:'/signup',
