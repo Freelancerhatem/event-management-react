@@ -10,10 +10,10 @@ import FAQ from '../Pages/FAQ/FAQ';
 const Home = () => {
     
     
-    const cardsdata = useLoaderData();
+    const cardsdata = useLoaderData([]);
     
     
-
+    console.log(cardsdata)
    
     return (
         <div>
