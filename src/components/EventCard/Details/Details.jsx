@@ -1,13 +1,19 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../../common/Navbar/Navbar";
 import Footer from "../../common/Footer/Footer";
+import { useContext } from "react";
+import { AuthContext } from "../../../AuthProvider/AuthProvider";
 
 
 const Details = () => {
     const cardDetails = useLoaderData([])
     const {id} = useParams();
+    const {loading} = useContext(AuthContext);
     
 
+    if(loading){
+        return <div className="w-screen h-[90vh] flex justify-center items-center"><span className="loading loading-dots loading-lg"></span></div>
+    }
     const detailsdata = cardDetails.find(Data=>Data.id==id);
     const{title,details,img} = detailsdata;
 
