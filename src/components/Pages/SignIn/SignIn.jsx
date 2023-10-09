@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../AuthProvider/AuthProvider";
 import Navbar from "../../common/Navbar/Navbar";
@@ -11,7 +11,7 @@ const SignIn = () => {
     const {signInUser,googleLogin} = useContext(AuthContext);
     const navigate =useNavigate()
     const location = useLocation();
-    const[userinfo,setUserinfo] = useState({})
+   
 
     const handleLogin =(e)=>{
         e.preventDefault();
@@ -35,9 +35,9 @@ const SignIn = () => {
     const handleGoogleSignin =(e)=>{
         e.preventDefault();
         googleLogin()
-        .then(res=>{
-            const user = res.user;
-            setUserinfo(user);
+        .then(()=>{
+            
+            
             swal("Good job!", "Log in Succesfully!", "success");
             navigate(location?.state? location.state :'/');
             

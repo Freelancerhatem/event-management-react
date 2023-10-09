@@ -14,7 +14,7 @@ const DashBoard = () => {
             </div>
            
             <div className="flex flex-col items-center mt-6">
-                <img className="w-28" src={user.photoURL == null ? userphoto : user.photoURL } alt="" />
+                <img className="w-28 rounded-full" src={user.photoURL == null ? userphoto : user.photoURL } alt="" />
                 
                 <h1 className="font-bold ">{user.displayName != null ? user.displayName : 'user_'+user.email.slice(0, 5)}</h1>
             
