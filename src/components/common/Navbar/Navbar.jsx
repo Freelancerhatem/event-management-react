@@ -64,6 +64,14 @@ const Navbar = () => {
                     <button className="block py-2 pl-3 pr-4 text-white  rounded" aria-current="page">Sign Up</button>
                   </li>
                 </NavLink>
+                <NavLink to='/booking' className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "border-b-2 border-white" : ""
+                }>
+                  <li>
+
+                    <button className={user? 'block py-2 pl-3 pr-4 text-white  rounded' : 'hidden'} aria-current="page">Booking</button>
+                  </li>
+                </NavLink>
               </ul>
             </div>
           </div>

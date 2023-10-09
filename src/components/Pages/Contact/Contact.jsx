@@ -93,13 +93,13 @@ const Contact = () => {
                 <div className='flex flex-col justify-center items-center mt-4'>
                 <span><HiLocationMarker className='w-8 h-8 text-orange-500'></HiLocationMarker></span>
                 <h1 className='text-base lg:text-2xl font-medium'>Address:</h1>
-                <p className=' text-xs lg:text-base'>Dhanmondi 15 block,Dhaka</p>
+                <p className=' text-xs lg:text-base'>Dhanmondi 15, Dhaka 1209</p>
                 
                 </div>
                 <div className='flex flex-col justify-center items-center mt-4'>
                 <span><HiOutlinePhoneMissedCall className='w-8 h-8 text-orange-500'></HiOutlinePhoneMissedCall></span>
                 <h1 className='text-base lg:text-2xl font-medium '>Call us:</h1>
-                <p className='text-center text-xs lg:text-base'>Call us to speak to a member of our team. We are always happy to help.</p>
+                <p className='text-center text-xs lg:text-base'>Call us to speak to a member of our team.</p>
                 <h3 className='text-orange-500 text-xs lg:text-base'>+88 016-09342968</h3>
                 
                 </div>

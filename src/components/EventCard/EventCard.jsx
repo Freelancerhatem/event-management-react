@@ -1,7 +1,15 @@
 import PropTypes from 'prop-types';
 import { Link} from 'react-router-dom';
+import swal from 'sweetalert';
+
 const EventCard = ({card}) => {
     const {title,img,details,price,id} = card;
+
+    const handlePrice=()=>{
+        swal("Done!", "Booking Successful!", "success");
+    }
+    
+    
     return (
         
             <div data-aos='fade-up' data-aos-duration="500" 
@@ -23,7 +31,7 @@ const EventCard = ({card}) => {
                     }
                 </div>
                 <div className="p-6 pt-0">
-                    <button className='btn px-2 py-2 text-center rounded-md bg-gradient-to-tr from-orange-500 to-orange-300 text-white font-medium w-36 font-fontPoppins'>Book Now: ${price}</button>
+                    <button className='btn px-2 py-2 text-center rounded-md bg-gradient-to-tr from-orange-500 to-orange-300 text-white font-medium w-36 font-fontPoppins' onClick={handlePrice}>Book Now: ${price}</button>
                 </div>
             </div>
         

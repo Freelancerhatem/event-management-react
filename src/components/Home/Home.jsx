@@ -6,6 +6,7 @@ import { useLoaderData } from 'react-router-dom';
 import EventCard from '../EventCard/EventCard';
 import Contact from '../Pages/Contact/Contact';
 import Footer from '../common/Footer/Footer';
+import FAQ from '../Pages/FAQ/FAQ';
 
 const Home = () => {
     
@@ -31,6 +32,13 @@ const Home = () => {
             {/* contact form */}
             <div>
                 <Contact></Contact>
+            </div>
+            <div data-aos='fade-up' data-duration='500'>
+                
+                <div className='w-60 md:w-[480px]  mx-auto my-10'>
+                <h1 className='text-center mt-0 lg:mt-4 text-base md:text-4xl font-semibold border-r-4 border-orange-500'>Frequently Ask <span className='text-orange-500'>Questions</span></h1>            
+                </div>
+                <FAQ></FAQ>
             </div>
             <Footer></Footer>
         </div>
