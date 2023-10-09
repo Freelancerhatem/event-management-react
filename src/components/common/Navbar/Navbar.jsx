@@ -29,7 +29,7 @@ const Navbar = () => {
               {
                 user ?
                   <div className="flex items-center gap-6">
-                    <div className="flex items-center gap-1"><img className="rounded-full w-4 lg:w-12" src={user.photoURL != null ? user.photoURL : '/src/assets/user.png'} alt="" /> <h1 className="font-medium text-xs lg:text-base text-white">{user.displayName != null ? user.displayName : user.email.slice(0, 5)}</h1></div>
+                    <div className="flex items-center gap-1"><img className="rounded-full w-4 lg:w-12" src={user.photoURL != null ? user.photoURL : '/src/assets/user.png'} alt="" /> <h1 className="font-medium text-xs lg:text-base text-white">{user.displayName != null ? user.displayName : 'user_'+user.email.slice(0, 5)}</h1></div>
                     <button onClick={handleSignOut} className="btn-xs rounded-md md:btn bg-white text-orange-400 hover:bg-orange-400 hover:text-white">Log Out</button>
                   </div>
                   : <Link to='/signin'>

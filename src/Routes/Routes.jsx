@@ -8,7 +8,6 @@ import SignUp from "../components/Pages/SignUp/SignUp";
 import Details from "../components/EventCard/Details/Details";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import Error from "../components/Pages/Error/Error";
-import Booking from "../components/PrivateRoute/Booking/Booking";
 
 export const router = createBrowserRouter([
     {
