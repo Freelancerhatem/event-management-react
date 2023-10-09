@@ -36,7 +36,7 @@ const Navbar = () => {
             <div className="hidden md:block">
               <span className="flex items-center">
                 <Link to='/'>
-                  <img src="/src/assets/logo.png" className="h-4 md:h-8 mr-1 lg:mr-3" alt=" Logo" />
+                  <img src="https://i.ibb.co/WkZFKJC/logo.png" className="h-4 md:h-8 mr-1 lg:mr-3" alt=" Logo" />
                 </Link>
                 <span className="self-center text-base lg:text-2xl font-semibold whitespace-nowrap text-white">Elite Events</span>
               </span>

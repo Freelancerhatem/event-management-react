@@ -1,7 +1,6 @@
-import { useContext } from 'react';
+
 import '../Home/Home.css'
 import Navbar from '../common/Navbar/Navbar';
-import { AuthContext } from '../../AuthProvider/AuthProvider';
 import { useLoaderData } from 'react-router-dom';
 import EventCard from '../EventCard/EventCard';
 import Contact from '../Pages/Contact/Contact';
@@ -12,6 +11,7 @@ const Home = () => {
     
     
     const cardsdata = useLoaderData();
+    
     
 
    

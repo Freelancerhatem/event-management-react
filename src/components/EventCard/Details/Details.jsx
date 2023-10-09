@@ -6,7 +6,6 @@ import Footer from "../../common/Footer/Footer";
 const Details = () => {
     const cardDetails = useLoaderData()
     const {id} = useParams();
-    console.log(id,cardDetails)
 
     const detailsdata = cardDetails.find(Data=>Data.id==id);
     const{title,details,img} = detailsdata;

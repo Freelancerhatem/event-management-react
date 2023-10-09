@@ -19,16 +19,16 @@ export const router = createBrowserRouter([
         {
             path:'/',
             element:<Home></Home>,
-            loader:()=>fetch('/public/event.json')
+            loader:()=>fetch('event.json')
         },
         {
             path:'/signin',
             element:<SignIn></SignIn>
         },
         {
-            path:'details/:id',
+            path:'/details/:id',
             element:<PrivateRoute><Details></Details></PrivateRoute>,
-            loader:()=>fetch('/public/event.json')
+            loader:()=>fetch('./event.json')
         },
         {
             path:'/signup',
