@@ -8,6 +8,7 @@ import SignUp from "../components/Pages/SignUp/SignUp";
 import Details from "../components/EventCard/Details/Details";
 import PrivateRoute from "../components/PrivateRoute/PrivateRoute";
 import Error from "../components/Pages/Error/Error";
+import DashBoard from "../components/Pages/DashBoard/DashBoard";
 
 export const router = createBrowserRouter([
     {
@@ -33,6 +34,11 @@ export const router = createBrowserRouter([
             path:'/signup',
             element:<SignUp></SignUp>
         },
+        {
+          path:'/dashboard',
+          element:<PrivateRoute><DashBoard></DashBoard></PrivateRoute>
+          
+       }
         
       ]
     },

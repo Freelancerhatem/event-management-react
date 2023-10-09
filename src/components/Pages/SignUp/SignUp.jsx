@@ -40,7 +40,7 @@ const SignUp = () => {
             <Navbar></Navbar>
             </div>
             <div>                
-                <div data-aos='fade-down' data-aos-duration="500" className="relative mt-32 mx-auto flex w-72 md:w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                <div data-aos='fade-down' data-aos-duration="500" className="relative mt-20 md:mt-32 mx-auto flex w-72 md:w-96 flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                     <div className="relative mx-4 -mt-6 mb-4 grid h-20 lg:h-28 place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-orange-500 to-orange-300 bg-clip-border text-white shadow-lg shadow-orange-500/40">
                         <h3 className="block font-sans text-base lg:text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
                             Sign Up

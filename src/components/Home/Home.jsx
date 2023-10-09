@@ -19,7 +19,11 @@ const Home = () => {
         <div>
 
             <div  className="banner h-[40vh] md:h-screen max-w-full">
+                
                 <Navbar className=''></Navbar>
+                <div className=''>
+                    <h1 className='md:text-4xl text-xl lg:text-7xl font-semibold md:font-extrabold text-center mt-4 shadow-md   md:mt-36'><span className='text-orange-500'>Your Vision </span> <br /><span className='text-white'>Our Expertise</span></h1>
+                </div>
             </div>
             <div className=' w-60  mx-auto mt-10'>
                 <h1 className='text-center mt-0 lg:mt-4 text-4xl font-semibold border-r-4 border-orange-500'>our <span className='text-orange-500'>services</span></h1>
